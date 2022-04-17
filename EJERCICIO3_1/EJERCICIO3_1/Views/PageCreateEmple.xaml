@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJERCICIO3_1.Views.PageCreateEmple">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#45D5CE">
+            <Frame BackgroundColor="#000C66" Padding="24" CornerRadius="0">
+                <Label Text="EJERCICIO 3.1" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Entry x:Name="codigo" Placeholder="Codigo" Text="{Binding codigo}"/>
+            <Entry x:Name="Nombre" Placeholder="Nombres" Text="{Binding nombres}"/>
+            <Entry x:Name="Apellidos" Placeholder="Apellidos" Text="{Binding apellidos}"/>
+            <Entry x:Name="Edad" Placeholder="Edad" Keyboard="Numeric" Text="{Binding edad}"/>
+            <Entry x:Name="Direccion" Placeholder="Direccion" Text="{Binding direccion}"/>
+            <Entry x:Name="Puesto" Placeholder="Puesto" Text="{Binding puesto}"/>
+            <Grid ColumnDefinitions="*,*">
+                <Button x:Name="btnagregar" Text="Agregar"  TextColor="White" BackgroundColor="#000C66" FontAttributes="Bold" Clicked="btnagregar_Clicked"/>
+                <Button Grid.Column="2" x:Name="btnborrar" Text="Borrar" TextColor="White" BackgroundColor="#000C66"  FontAttributes="Bold" Clicked="btnborrar_Clicked"/>
+                <Button Grid.Column="1" x:Name="btnactualizar" Text="Actualizar" TextColor="White" BackgroundColor="#000C66"  FontAttributes="Bold" Clicked="btnactualizar_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

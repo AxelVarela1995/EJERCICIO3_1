@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJERCICIO3_1.Views.EmplePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar"  Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#45D5CE">
+            <Frame BackgroundColor="#000C66" Padding="24" CornerRadius="0">
+                <Label Text="Ejercicio 3.1" HorizontalTextAlignment="Center" TextColor="Beige" FontSize="36"/>
+            </Frame>
+            <Label Text="Lista de Empleados" HorizontalTextAlignment="Center" FontSize="30"/>
+            <ListView x:Name="ListaEmpleados" ItemTapped="ListaEmpleados_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding nombres}"  Detail="{Binding apellidos} "/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
